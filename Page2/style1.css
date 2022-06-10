@@ -3,7 +3,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #135074, #dd9856);
+    background: linear-gradient(to bottom, #135074, #dd9856);
     margin: 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
@@ -12,19 +12,13 @@ body {
 :root {
     --background: rgba(85, 214, 170, .5);
 }
-/*.container {
-    width: 80%;
-    margin: 0 auto;
-}*/
 
-
-.content {
-    height: 200vh;
+/*.content {
+    height: 100vh;
     display: grid;
     border: 1px solid white;
 }
-
-
+*/
 /*navigation style start here*/
 
 header {
@@ -184,6 +178,69 @@ nav a:hover {
         transform: scale(1,1);
     }
   }
+
+
+  /*main content below*/
+
+
+  main {
+      width: 100%;
+      min-height: 100vh;
+  }
+.card {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    margin: -150px;
+    float: left;
+    perspective: 500px;
+}
+
+.content2 {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+
+.card:hover .content2 {
+    
+    transform: rotateY(180deg);
+    transition: transform  .5s ease-in-out;
+}
+
+.front, 
+.back {
+    position:  absolute;
+    height: 100%;
+    width: 100%;
+    background: none;
+    line-height: 300px;
+    color: #03446a;
+    text-align: center;
+    font-size: 60px;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.back {
+    border: 1px solid black;
+    background: #03446a;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+
+
 
   /*header {
     background: #55d6aa;

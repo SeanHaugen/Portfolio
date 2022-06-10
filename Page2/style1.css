@@ -294,7 +294,9 @@ nav a:hover {
 
 .back {
     border: 1px solid black;
-    background: #03446a;
+    background: url("https://source.unsplash.com/random/100x100");
+    background-repeat: no-repeat;
+    background-size:cover;
     color: white;
     transform: rotateY(180deg);
 }

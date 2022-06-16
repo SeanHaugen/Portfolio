@@ -13,13 +13,6 @@ body {
     --background: rgba(85, 214, 170, .5);
 }
 
-/*.content {
-    height: 100vh;
-    display: grid;
-    border: 1px solid white;
-}
-*/
-
 
 /*navigation style start here*/
 
@@ -332,7 +325,7 @@ section {
     isolation: isolate;
     appearance: none;
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 1rem;
     padding: 1em 3em;
     text-transform: uppercase;
     background-color: transparent;

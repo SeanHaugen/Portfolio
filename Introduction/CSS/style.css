@@ -1,0 +1,334 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    background: white;
+    height: 100vh;
+    font-family:EB+Garamond,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+
+header {
+    background: rgb(133, 133, 133);
+    border-bottom: 1px solid gray;
+    text-align: center;
+    position:sticky;
+    z-index: 999;
+    width: 100%;
+    
+}
+/*hamburger style*/
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after { 
+    display: block;
+    background: rgb(7, 7, 7);
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+/*styling nav & putting nav in the hamburger*/
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    background: rgba(2, 0, 0, 0.822);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: rgb(146, 145, 145);
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+@media screen and (min-width: 800px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+        
+    }
+    .logo {
+        grid-column:  2 / 3;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+        color: black;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+
+    nav li {
+        margin-bottom: 1em;
+        margin-left: 1em;
+        
+    }
+    nav a::before {
+        content: '';
+        display: block;
+        background: black;
+        height: 5px;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        /*transform-origin: right;*/
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
+}
+
+/*title & main intro start*/
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.title {
+    height: 30vh; 
+    width: auto;
+    background: url('/Introduction/Resources/usgs-hoS3dzgpHzw-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid rgb(95, 95, 95); 
+    opacity: .90;
+    text-transform: uppercase;
+}
+
+.myName {
+    height: 50%;
+    color:rgb(145, 145, 145);
+    opacity: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/*main introduction cards start*/
+
+#introduction {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+.picture img {
+    visibility: hidden;
+    height: 0; 
+    width: 0;
+}
+
+.card {
+    position: relative;
+    margin: 10px;
+    margin-top: 3em;
+    width: 300px;
+    height: 350px;
+    perspective: 500px;
+    float: left;
+    /* box-shadow: 0px 0px 15px rgb(134, 134, 134); */
+    border-radius: .25em;
+}
+
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card:hover .content {
+    transform: rotateY(180deg);
+    transition: transform 500ms ease-in-out;
+}
+
+.front, 
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: none;
+    line-height: 2em;
+    color: #03446a;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: .125em;
+    backface-visibility: hidden;
+    margin: auto;
+    background: linear-gradient(to bottom, #13507480, #dd975698);
+}
+
+.front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back {
+    transform: rotateY(180deg)
+}
+
+
+@media screen and (min-width: 900px) {
+
+    .title {
+        height: 50vh;
+        font-size: 4em;
+    }
+
+    #introduction {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        justify-items: flex-end;
+    }
+
+    .picture {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        margin-left: 3em;
+        justify-self: flex-start;
+    }
+    
+    .welcome {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        height: 300px;
+        width: 450px;
+    }
+
+    .about {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        height: 300px;
+        width: 450px;
+    }
+
+    .more {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        margin-left: 10px;
+        justify-self: flex-start;
+        height: 300px;
+        width: 450px;
+    }
+
+    .picture img {
+        visibility: visible;
+        height: auto;
+        width: auto;
+        border-radius: 1em;
+        position: relative;
+        justify-content: center;
+        margin-top: 2.5em;
+        
+    }
+
+
+    .card {
+        width: 350;
+        height: 250;
+    }
+
+
+}
+

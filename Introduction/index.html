@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href = "CSS/style.css"  >
-    <script src="https://kit.fontawesome.com/ec021be0ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href= "CSS/style.css"  >
+
     <script src = "Javascript/script.js" defer></script>
     <title>Portfolio Website</title>
 </head>
@@ -18,8 +18,8 @@
             <ul>
                 <li><a href="#">Home</a> </li>
                 <li><a href="../Page3/index2.html">Experiance</a> </li>
-                <li><a href="../contact/contact.html">Contact</a> </li>
-                <li><a href="#">Projects</a> </li>
+                <li><a href="../contact/contact.html">Projects</a> </li>
+                <li><a href="#">Contact</a> </li>
             </ul>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label" >
@@ -29,27 +29,26 @@
     
     <div class="title">
         <h1 class="myName">Sean Haugen </h1>
-        <div class="picture">
-            <img src= "Resources/headshot.2.PNG" alt="handsome man" class="headshot">
-            <div>
-                <p class="blurb">I am a front end developer creating responsive, accesible websites and apps</p>
-            </div>
-        </div>
     </div>
     <main id="main-container">
         <section id="introduction">
+            <div class="picture">
+                <img src= "Resources/headshot.2.PNG" alt="handsome man" class="headshot">
+                <div>
+                    <h1></h1>
+                </div>
+            </div>
             <div class="card welcome">
                 <div class="content">
                     <div class="front">
                         <h2>Welcome to my Portfolio</h2>
                     </div>
                     <div class="back">
-                        <p>Here you will find the following:</p>
+                        <p>The purpose of this site is to showcase my experience and the skills I have learned as a web developer. Here you will find the following:</p>
                             <ul>
                                 <li>Learn more about me</li>
-                                <li>Projects</li>
-                                <li>Skills</li>
-                                <li>Experience</li>
+                                <li>Projects I have completed</li>
+                                <li>Work Experience</li>
                                 <li>Other creative projects</li>
                             </ul>
                     </div>
@@ -65,14 +64,18 @@
                     </div>
                 </div>
             </div>
-            <div class="more-intro">
-                <p>The purpose of this site is to showcase my experience and the skills I have learned as a web developer.</p>
-            </div>
-            <div class="more-about">
-                <p>More info about me!</p>
+            <div class="card more">
+                <div class="content">
+                    <div class="front">
+                        <h2>Learn More</h2>
+                    </div>
+                    <div class="back">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde sit iure aspernatur temporibus! . </p>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="my-project-container">
+        <section>
             <div class="Projects">
                 <h1 class="section-header">Projects</h1>
                 <button onclick="reveal()" class="ripple-button ripple-button1"><h2>Book Club</h2></button>
@@ -89,16 +92,10 @@
                 </div>
             </div>
         </section>
-        <section class= "my-skills-container">
-            <h1>Skills</h1>
-            <i class="fa-brands fa-html5 fa-8x"></i>
-            <i class="fa-brands fa-css3-alt fa-8x"></i>
-            <i class="fa-brands fa-js fa-8x"></i>
-            <i class="fa-brands fa-git-alt fa-8x"></i>
-        </section>
         <footer>
             <div class="footer"></div>
         </footer>
 </main>
 </body>
 </html>
+

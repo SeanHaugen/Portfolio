@@ -12,6 +12,9 @@ body {
     
 }
 
+ul li {
+    list-style: none;
+}
 
 
 header {
@@ -297,6 +300,11 @@ main {
         width: 450px;
     }
 
+    .welcome ul {
+        position: relative;
+        right: 5%;
+    }
+
     .about {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
@@ -357,7 +365,7 @@ main {
     width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background: black;
+    background: whitesmoke;
     opacity: 0.5;
 }
 
@@ -380,26 +388,34 @@ main {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    border: 1px solid red;
     align-items: center;
   }
 
   .ripple-button {
     margin: 2em;
-    width: 300px;;
+    width: 300px;
+    color: white;
+    border-color: white;
+    
   }
 
-  .myDiv {
-    display: none;
-  }
 
-  .newSection {
+  .section-header {
     font-size: 3em;
     text-align: center;
+    color: white;
+  }
+
+  section .Projects{
+    background: linear-gradient(rgb(6, 20, 58), black);
   }
 
   footer {
     height: 15vh;
     background: black;
 
+  }
+
+  .img-container img {
+    display: none;
   }

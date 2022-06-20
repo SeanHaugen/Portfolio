@@ -300,15 +300,16 @@ main {
     .picture {
         display: flex;
         justify-content: center;
-        position: relative;
-        top: -100%;
+        position:relative;
+        top: -100px;
     }
 
     .picture  img {
         visibility: visible;
         height: auto;
         width: auto;
-        border-radius: 10px;
+        border-radius: 10%;
+        align-self: center;
     }
 
     #introduction {

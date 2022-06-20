@@ -301,7 +301,7 @@ main {
         display: flex;
         flex-flow: column wrap;
         position: relative;
-        top: -10%;
+        top: -40%;
     }
 
     .picture  img {

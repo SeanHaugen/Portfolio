@@ -308,7 +308,7 @@ main {
         visibility: visible;
         height: auto;
         width: auto;
-        border-radius: 10%;
+        border-radius: 10px;
     }
 
     #introduction {

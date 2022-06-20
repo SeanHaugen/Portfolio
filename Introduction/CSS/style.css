@@ -303,6 +303,11 @@ main {
         position:relative;
         top: -100px;
     }
+    
+    .blurb {
+        height: auto;
+        width: 10em;
+    }
 
     .picture  img {
         visibility: visible;

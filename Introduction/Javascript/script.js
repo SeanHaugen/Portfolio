@@ -73,7 +73,7 @@ rippleButton3.addEventListener('mousedown', (e) => {
 })
 
 let reveal = () => {
-  let x = document.querySelector(".myDiv");
+  let x = document.querySelector(".img-container");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {

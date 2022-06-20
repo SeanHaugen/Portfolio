@@ -175,16 +175,11 @@ nav a:hover {
 }
 
 /*title & main intro start*/
-main {
-    width: 100%;
-    min-height: 100vh;
-    background: white;
-}
 
 .title {
-    height: 30vh; 
+    height: 35vh; 
     width: auto;
-    background: url('../Resources/usgs-hoS3dzgpHzw-unsplash.jpg');
+    background: url('Resources/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid rgb(95, 95, 95); 
@@ -198,11 +193,25 @@ main {
     opacity: 2;
     display: flex;
     justify-content: center;
-    align-items: center;
+    font-size: 2em;
    
 }
 
+.blurb {
+    width: auto;
+    height: auto;
+    text-align: center;
+    
+}
+
 /*main introduction cards start*/
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+}
+
 
 #introduction {
     display: flex;
@@ -257,7 +266,9 @@ main {
     border-radius: .125em;
     backface-visibility: hidden;
     margin: auto;
-    background: linear-gradient(to bottom, #13507480, #dd975698);
+    /* background: linear-gradient(to bottom, #13507480, #dd975698); */
+    background-image: url('Resources/gradienta-7brhZmwXn08-unsplash.jpg');
+    background-size:cover;
 }
 
 .front {
@@ -270,12 +281,34 @@ main {
     transform: rotateY(180deg)
 }
 
+.more-intro {
+    visibility: hidden;
+}
+
+.more-about {
+    visibility: hidden;
+}
+
 
 @media screen and (min-width: 900px) {
 
     .title {
         height: 50vh;
-        font-size: 4em;
+        font-size: 1em;
+    }
+
+    .picture {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .picture  img {
+        visibility: visible;
+        height: auto;
+        width: auto;
+        border-radius: 1em;
+        border: 1px solid black;
+        align-self: center;
     }
 
     #introduction {
@@ -286,13 +319,6 @@ main {
         justify-items: flex-end;
     }
 
-    .picture {
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
-        margin-left: 3em;
-        justify-self: flex-start;
-    }
-    
     .welcome {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
@@ -312,29 +338,40 @@ main {
         width: 450px;
     }
 
-    .more {
+    /*.more {
         grid-column: 3 / 4;
         grid-row: 2 / 3;
         margin-left: 10px;
         justify-self: flex-start;
         height: 300px;
         width: 450px;
-    }
+    }*/
 
-    .picture img {
+    .more-intro {
         visibility: visible;
-        height: auto;
-        width: auto;
-        border-radius: 1em;
-        position: relative;
-        justify-content: center;
-        margin-top: 2.5em;
+        grid-column: 3 / 4;
+        font-size: 1.5em;
+        border: 1px solid black;
+        box-shadow: 12px 12px 2px 1px #03446a;
+        text-align: center;
     }
 
+    .more-about {
+        visibility: visible;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        font-size: 1.5em;
+        border: 1px solid black;
+        box-shadow: 12px 12px 2px 1px #03446a;
+        text-align: center;
+        justify-self: flex-start;
+        height: auto;
+        width: 450px;
+    }
 
 }
 
-
+/*project section*/
 
 .ripple-button1,
 .ripple-button2,
@@ -365,7 +402,7 @@ main {
     width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background: whitesmoke;
+    background: black;
     opacity: 0.5;
 }
 
@@ -394,8 +431,8 @@ main {
   .ripple-button {
     margin: 2em;
     width: 300px;
-    color: white;
-    border-color: white;
+    color: black;
+    border-color: black;
     
   }
 
@@ -403,11 +440,11 @@ main {
   .section-header {
     font-size: 3em;
     text-align: center;
-    color: white;
+    color: black;
   }
 
   section .Projects{
-    background: linear-gradient(rgb(6, 20, 58), black);
+    background: whitesmoke;
   }
 
   footer {
@@ -419,3 +456,16 @@ main {
   .img-container img {
     display: none;
   }
+
+  /*skills section*/
+
+  .my-skills-container {
+    display: block;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .fa-brands {
+    gap: 10px;
+  }
+ 

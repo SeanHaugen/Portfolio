@@ -300,6 +300,8 @@ main {
     .picture {
         display: flex;
         flex-flow: column wrap;
+        position: relative;
+        top: -10%;
     }
 
     .picture  img {

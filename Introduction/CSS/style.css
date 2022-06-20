@@ -179,7 +179,7 @@ nav a:hover {
 .title {
     height: 35vh; 
     width: auto;
-    background: url('Resources/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg');
+    background-image: url("../Resources/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid rgb(95, 95, 95); 
@@ -267,7 +267,7 @@ main {
     backface-visibility: hidden;
     margin: auto;
     /* background: linear-gradient(to bottom, #13507480, #dd975698); */
-    background-image: url('Resources/gradienta-7brhZmwXn08-unsplash.jpg');
+    background-image: url('../Resources/gradienta-7brhZmwXn08-unsplash.jpg');
     background-size:cover;
 }
 
@@ -308,8 +308,7 @@ main {
         visibility: visible;
         height: auto;
         width: auto;
-        border-radius: 1em;
-        border: 1px solid black;
+        border-radius: 50%;
     }
 
     #introduction {

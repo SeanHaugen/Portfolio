@@ -477,7 +477,7 @@ main {
         
     }
 
-    .ripple-button {
+    .project-link {
         grid-column: 2 / 3;
     }
 
@@ -503,6 +503,9 @@ main {
   .fa-brands {
     gap: 10px;
   }
+
+
+  /*footer section*/
  
 
   footer {

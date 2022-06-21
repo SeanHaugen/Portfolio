@@ -201,6 +201,9 @@ nav a:hover {
     width: auto;
     height: auto;
     text-align: center;
+    margin-left: 1em;
+    position: relative;
+    top: 15%;
     
 }
 
@@ -379,6 +382,12 @@ main {
 
 /*project section*/
 
+.img-container img {
+    height: 200px;
+    width: 300px;
+}
+
+
 .ripple-button1,
 .ripple-button2,
 .ripple-button3  {
@@ -459,10 +468,22 @@ main {
 
   }
 
-  .img-container img {
-    display: none;
+  @media screen and (min-width: 900px) {
+    .Projects {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        
+    }
+
+    .ripple-button {
+        grid-column: 2 / 3;
+    }
+
   }
 
+ 
   /*skills section*/
 
   .my-skills-container {
@@ -483,3 +504,9 @@ main {
     gap: 10px;
   }
  
+
+  footer {
+    text-align: center;
+    position: relative;
+    top: 50%;
+  }

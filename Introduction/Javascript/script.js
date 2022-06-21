@@ -42,7 +42,7 @@ rippleButton2.addEventListener('mousedown', (e) => {
     rippleButton2.addEventListener(
       "animationend",
       () => {
-        rippleButton.classList.remove("pulse");
+        rippleButton2.classList.remove("pulse");
       },
       { once: true }
   );

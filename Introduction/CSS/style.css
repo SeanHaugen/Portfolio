@@ -512,4 +512,14 @@ main {
     text-align: center;
     position: relative;
     top: 50%;
+    height: 25vh;
+  }
+
+  footer h1 {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .icon-container i {
+    margin: 10px;
   }
